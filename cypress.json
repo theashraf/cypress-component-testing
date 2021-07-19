@@ -1,0 +1,11 @@
+{
+  "component": {
+    "componentFolder": "src",
+    "testFiles": "**/__tests__/**/*.spec.jsx",
+    "pluginsFile": "./cypress/plugins/index.js",
+    "supportFile": "./cypress/support/index.js"
+  },
+  "fixturesFolder": false,
+  "video": false,
+  "screenshotOnRunFailure": false
+}

@@ -14,14 +14,21 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:dev": "cypress open-ct",
+    "test": "cypress run-ct"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "plugins": [
+      "cypress"
+    ],
+    "env": {
+      "cypress/globals": true
+    }
   },
   "browserslist": {
     "production": [
@@ -34,5 +41,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@cypress/react": "^5.9.1",
+    "@cypress/webpack-dev-server": "^1.4.0",
+    "@testing-library/cypress": "^7.0.6",
+    "cypress": "^7.7.0",
+    "eslint-plugin-cypress": "^2.11.3",
+    "webpack-dev-server": "^3.11.2"
   }
 }
